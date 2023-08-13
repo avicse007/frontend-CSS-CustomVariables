@@ -1,0 +1,26 @@
+.pie-chart {
+	width: 10em;
+	height: 10em;
+	padding: calc(var(--size, 15em)  / 2);
+	border-radius: 50%;
+	
+	--_value1: var(--value1, 0);
+	--_value2: calc(var(--_value1) + var(--value2, 0));
+	--_value3: calc(var(--_value2) + var(--value3, 0));
+	--_value4: calc(var(--_value3) + var(--value4, 0));
+	--_value5: calc(var(--_value4) + var(--value5, 0));
+	
+	--_color1: var(--color1, hsl(0 80% 50%));
+	--_color2: var(--color2, hsl(25 80% 50%));
+	--_color3: var(--color3, hsl(50 80% 50%));
+	--_color4: var(--color4, hsl(75 80% 50%));
+	--_color5: var(--color5, hsl(100 80% 50%));
+	
+	background: conic-gradient(
+		var(--_color1) var(--_value1),
+		var(--_color2) 0 var(--_value2),
+		var(--_color3) 0 var(--_value3),
+		var(--_color4) 0 var(--_value4),
+		var(--_color5) 0 var(--_value5),
+		gray 0);
+}
